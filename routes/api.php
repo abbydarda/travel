@@ -18,9 +18,14 @@ use Illuminate\Http\Request;
 // });
 
 Route::prefix('admin/v1')->group(function (){
-  Route::get('/rute','RuteController@index');
-  Route::get('/rute/{id}','RuteController@show');
-  Route::post('/rute','RuteController@store');
-  Route::put('/rute/{id}','RuteController@update');
-  Route::delete('/rute{id}','RuteController@destroy');
+  Route::get('/jurusan','JurusanController@index');
+  Route::get('/jurusan/{id}','JurusanController@show');
+  Route::post('/jurusan','JurusanController@store');
+  Route::put('/jurusan/{id}','JurusanController@update');
+  Route::delete('/jurusan/{id}','JurusanController@destroy');
+  Route::get('/supir','SupirController@index');
+  Route::get('/supir/{id}','SupirController@show');
+  Route::post('/supir','SupirController@store');
+  Route::put('/supir/{id}','SupirController@update');
+  Route::delete('/supir/{id}','SupirController@destroy');
 });

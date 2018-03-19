@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Service\RuteService;
-use App\Service\Contract\RuteServiceProvider;
+use App\Service\JurusanService;
+use App\Service\Contract\SupirServiceProvider;
+use App\Service\Contract\JurusanServiceProvider;
+use App\Service\SupirService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(RuteServiceProvider::class, RuteService::class);
+        $this->app->bind(JurusanServiceProvider::class, JurusanService::class);
+        $this->app->bind(SupirServiceProvider::class, SupirService::class);
     }
 }
