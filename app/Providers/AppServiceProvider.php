@@ -4,9 +4,11 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Service\JurusanService;
-use App\Service\Contract\SupirServiceProvider;
-use App\Service\Contract\JurusanServiceProvider;
+use App\Service\JadwalService;
 use App\Service\SupirService;
+use App\Service\Contract\SupirServiceProvider;
+use App\Service\Contract\JadwalServiceProvider;
+use App\Service\Contract\JurusanServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,5 +31,6 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(JurusanServiceProvider::class, JurusanService::class);
         $this->app->bind(SupirServiceProvider::class, SupirService::class);
+        $this->app->bind(JadwalServiceProvider::class, JadwalService::class);
     }
 }

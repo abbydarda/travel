@@ -28,4 +28,9 @@ Route::prefix('admin/v1')->group(function (){
   Route::post('/supir','SupirController@store');
   Route::put('/supir/{id}','SupirController@update');
   Route::delete('/supir/{id}','SupirController@destroy');
+  Route::get('/jadwal','JadwalController@index');
+  Route::get('/jadwal/{id}','JadwalController@show');
+  Route::post('/jadwal','JadwalController@store');
+  Route::put('/jadwal/{id}','JadwalController@update');
+  Route::delete('/jadwal/{id}','JadwalController@destroy');
 });
